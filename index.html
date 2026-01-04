@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beat the Machine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game-wrapper">
+
+  <!-- GAME AREA -->
+  <div class="game">
+    <h1>🤖 Beat the Machine</h1>
+    <p class="sub">Human vs Machine • Speed & Logic Challenge</p>
+
+    <input id="playerName" type="text" placeholder="Enter your name" maxlength="12">
+
+    <div class="modes">
+      <button id="normalMode" class="mode active">Normal</button>
+      <button id="hardMode" class="mode">🔥 Hard</button>
+    </div>
+
+    <button id="startBtn">START</button>
+
+    <div id="rule"></div>
+    <div id="signal"></div>
+
+    <div class="bar-box">
+      <div id="bar"></div>
+    </div>
+
+    <div class="buttons">
+      <button id="redBtn" disabled>RED</button>
+      <button id="blueBtn" disabled>BLUE</button>
+    </div>
+
+    <div id="decisionBox" class="decision hidden">
+      <button id="continueBtn">➡️ Continue</button>
+      <button id="restartBtn">🔁 Restart</button>
+    </div>
+
+    <div id="status"></div>
+  </div>
+
+  <!-- SIDE LEADERBOARD -->
+  <div class="side-board">
+    <h3>🏆 Leaderboard</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Lvl</th>
+        </tr>
+      </thead>
+      <tbody id="leaderboard"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
