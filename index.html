@@ -1,65 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Beat the Machine</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexora - Structured Academic Intelligence</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="navbar">
+        <button class="menu-btn" aria-label="Menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        <div class="logo">
+            <span class="logo-text">Lexora</span>
+            <span class="beta-badge">BETA 1.0</span>
+        </div>
+    </nav>
 
-<div class="game-wrapper">
+    <main class="container">
+        <div class="hero-section">
+            <div class="logo-icon">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                    <circle cx="30" cy="30" r="28" stroke="#666" stroke-width="1"/>
+                    <circle cx="30" cy="15" r="4" fill="#666"/>
+                    <circle cx="15" cy="30" r="4" fill="#666"/>
+                    <circle cx="45" cy="30" r="4" fill="#666"/>
+                    <circle cx="22" cy="42" r="4" fill="#666"/>
+                    <circle cx="38" cy="42" r="4" fill="#666"/>
+                    <line x1="30" y1="19" x2="30" y2="26" stroke="#666" stroke-width="2"/>
+                    <line x1="26" y1="17" x2="19" y2="28" stroke="#666" stroke-width="2"/>
+                    <line x1="34" y1="17" x2="41" y2="28" stroke="#666" stroke-width="2"/>
+                    <line x1="19" y1="32" x2="24" y2="40" stroke="#666" stroke-width="2"/>
+                    <line x1="41" y1="32" x2="36" y2="40" stroke="#666" stroke-width="2"/>
+                    <line x1="26" y1="42" x2="34" y2="42" stroke="#666" stroke-width="2"/>
+                    <text x="30" y="56" text-anchor="middle" font-size="8" fill="#666" font-family="Arial">LEXORA</text>
+                </svg>
+            </div>
 
-  <!-- GAME AREA -->
-  <div class="game">
-    <h1>🤖 Beat the Machine</h1>
-    <p class="sub">Human vs Machine • Speed & Logic Challenge</p>
+            <h1 class="main-title">Structured Academic Intelligence</h1>
+            
+            <p class="subtitle">
+                Lexora helps you deconstruct complex topics with<br>
+                academic precision. Ask me anything.
+            </p>
+        </div>
 
-    <input id="playerName" type="text" placeholder="Enter your name" maxlength="12">
+        <div class="suggestions-grid">
+            <button class="suggestion-card">
+                Explain Quantum Entanglement
+            </button>
+            <button class="suggestion-card">
+                Analyze the fall of Rome
+            </button>
+            <button class="suggestion-card">
+                Structure a thesis on AI ethics
+            </button>
+            <button class="suggestion-card">
+                Summarize 'The Prince' by Machiavelli
+            </button>
+        </div>
 
-    <div class="modes">
-      <button id="normalMode" class="mode active">Normal</button>
-      <button id="hardMode" class="mode">🔥 Hard</button>
-    </div>
+        <div class="input-section">
+            <div class="input-wrapper">
+                <input 
+                    type="text" 
+                    class="main-input" 
+                    placeholder="Ask Lexora anything..."
+                    aria-label="Ask Lexora anything"
+                >
+                <button class="send-btn" aria-label="Send">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M10 4 L10 16 M10 4 L6 8 M10 4 L14 8"/>
+                    </svg>
+                </button>
+            </div>
+            <p class="disclaimer">
+                Lexora can make mistakes. Consider checking important information.
+            </p>
+        </div>
+    </main>
 
-    <button id="startBtn">START</button>
-
-    <div id="rule"></div>
-    <div id="signal"></div>
-
-    <div class="bar-box">
-      <div id="bar"></div>
-    </div>
-
-    <div class="buttons">
-      <button id="redBtn" disabled>RED</button>
-      <button id="blueBtn" disabled>BLUE</button>
-    </div>
-
-    <div id="decisionBox" class="decision hidden">
-      <button id="continueBtn">➡️ Continue</button>
-      <button id="restartBtn">🔁 Restart</button>
-    </div>
-
-    <div id="status"></div>
-  </div>
-
-  <!-- SIDE LEADERBOARD -->
-  <div class="side-board">
-    <h3>🏆 Leaderboard</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Name</th>
-          <th>Lvl</th>
-        </tr>
-      </thead>
-      <tbody id="leaderboard"></tbody>
-    </table>
-  </div>
-
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
